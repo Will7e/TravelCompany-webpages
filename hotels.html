@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Hotels</title>
+    <link rel="stylesheet" href="hotelstyle.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+      $(function () {
+        $("#header").load("assets/header.html");
+        $("#footer").load("assets/footer.html");
+      });
+    </script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <div class="wrapper">
+      <div class="hotels-intro" style="color: aliceblue">
+        <h1>Find your great stay</h1>
+      </div>
+      <div class="form-container">
+        <form action="">
+          <div class="input-box location-box">
+            <span>Location</span>
+            <input
+              type="text"
+              name="search"
+              id=""
+              placeholder="Search places"
+            />
+          </div>
+
+          <div class="input-box check-box" >
+            <span>Check in </span>
+            <input type="date" name="" id="" placeholder="Check in date" />
+          </div>
+          <div class="input-box check-box">
+            <span>Check out </span>
+            <input type="date" name="" id="" placeholder="Check out date" />
+          </div>
+          <div class="input-box">
+            <span>Adults</span>
+            <input type="number" name="" id="" placeholder="0" />
+          </div>
+          <div class="input-box kid-box">
+            <span>Kids</span>
+      
+            <input type="number" name="" id="" placeholder="0" />
+          </div>
+          <div class="search-btn">
+            <a href="#" class="search-button">Search</a>
+          </div>
+        </form>
+      </div>
+      <h2>
+        <p id="quote">
+          If you don’t do it this year, you will be one year older when you do
+        </p id = "author">
+        <p>- Warren Miller</p>
+      </h2>
+    </div>
+
+    <div id="footer"></div>
+  </body>
+</html>

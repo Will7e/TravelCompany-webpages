@@ -1,0 +1,258 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  text-decoration: none !important;
+  list-style: none;
+}
+:root {
+  --clr-header: rgba(62, 255, 243, 0.48);
+  --clr-cloud: #00a3ff;
+  --clr-primary: #0c0e36;
+  --clr-white: #ffffff;
+  --clr-footer: rgba(139, 255, 248, 0.48);
+  --clr-gold: rgb(255, 215, 0);
+  --clr-grayline: #eeeeeecb;
+  --fw-normal: 400;
+  --fw-bold: 600;
+  --fw-black: 900;
+  --grid: 1 fr;
+}
+html {
+  height: 100%;
+}
+
+.resort-body {
+  display: flex !important;
+  align-content: center !important;
+  font-family: "Work Sans", sans-serif;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+}
+#footer {
+  margin-top: auto;
+}
+#header {
+  display: flex;
+}
+.wrapper {
+  flex: 1;
+}
+.wrapper {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.img-box {
+  display: grid;
+  grid-row: span 3;
+  margin: 0;
+  padding: 4.5rem 40px 50px 40px;
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.img-box:after {
+  clear: both;
+}
+
+.img-box:after,
+.img-box:before {
+  content: "";
+  display: table;
+}
+
+.img-box li {
+  width: 400px;
+  height: 300px;
+  display: inline-block;
+  margin: 20px;
+}
+
+.img-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+  -webkit-transition: 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out, -moz-transform 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.img-box:hover {
+  transform: scale(1.05);
+}
+
+.img-1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+    /* top, image */
+      url(https://dynaimage.cdn.cnn.com/cnn/q_auto,w_1100,c_fill,g_auto,h_619,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F160105173036-10-ski-resorts-wengen.jpg);
+  background-size: cover;
+}
+
+.img-2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+    /* top, image */
+      url(https://dynaimage.cdn.cnn.com/cnn/q_auto,w_1100,c_fill,g_auto,h_619,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F160105172044-ski-resorts-01-kitzbuhel.jpg);
+  background-size: cover;
+}
+
+.img-3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+    /* top, image */
+      url(https://dynaimage.cdn.cnn.com/cnn/q_auto,w_1100,c_fill,g_auto,h_619,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F160105161338-03-ski-resorts-courmayeur.jpg);
+  background-size: cover;
+}
+
+.img-4 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+    /* bottom, image */
+      url(https://www.snowmagazine.com/images/features/top-tens/mayrhofen-group-on-ski-lift.jpg);
+  background-size: cover;
+}
+.img-5 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+    /* bottom, image */
+      url(https://www.snowmagazine.com/images/features/top-tens/beautiful-val-disere-france-at-night.jpg);
+  background-size: cover;
+}
+.img-6 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+    /* bottom, image */
+      url(https://images.unsplash.com/photo-1519659675643-e5885721661f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  background-size: cover;
+}
+.img-info {
+  width: inherit;
+  height: inherit;
+}
+
+.img-info h3 {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.897);
+  font-size: 35px;
+  margin: 0;
+  padding: 100px 0 0 0;
+  line-height: 1.5;
+}
+
+.img-info p {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #fff;
+  padding: 10px 5px;
+  margin: 0 30px;
+  font-size: 14px;
+  line-height: 2;
+  font-style: italic;
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 350px) and (min-height: 640px) {
+  html {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+  }
+  .resort-body {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-evenly !important;
+    font-family: "Work Sans", sans-serif;
+    align-content: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0;
+    position: relative;
+  }
+  #footer {
+    flex-shrink: 0;
+  }
+  #header {
+    flex-basis: 100%;
+  }
+
+  .img-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .img-box :hover {
+    transform: none;
+  }
+
+  .img-box {
+    display: grid;
+    grid-row: span 3;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .img-box:after {
+    clear: both;
+  }
+
+  .img-box:after,
+  .img-box:before {
+    content: "";
+    display: table;
+  }
+
+  .img-box li {
+    width: 280px;
+    height: 200px;
+    display: inline-block;
+    margin: 10px 20px 0px 20px;
+  }
+
+  .img-box li :last-child {
+    margin-top: 10px;
+  }
+
+  .img-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .img-info p {
+    font-family: "Source Sans Pro", sans-serif;
+    color: #fff;
+    padding: 4px 5px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1;
+    font-style: italic;
+  }
+  .wrapper {
+    flex: 1 0 auto;
+    display: flex;
+    align-content: center;
+    padding: 30px 0px 50px 0px;
+    flex-direction: column;
+  }
+  .wrapper > header {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  .weather__info span {
+    color: var(--clr-white);
+    margin-right: 1rem;
+    margin-left: 3rem !important;
+    font-size: 1rem;
+  }
+  .nav__list {
+    padding-left: 5px !important;
+  }
+}

@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;900&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  text-decoration: none !important;
+}
+:root {
+  --clr-header: rgba(62, 255, 243, 0.48);
+  --clr-cloud: #00a3ff;
+  --clr-primary: #0c0e36;
+  --clr-white: #ffffff;
+  --clr-footer: rgba(139, 255, 248, 0.48);
+  --fw-normal: 400;
+  --fw-bold: 600;
+  --fw-black: 900;
+  --grid: 1 fr;
+}
+html,
+body {
+  position: relative;
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.125em;
+  color: var(--clr-primary);
+  line-height: 1, 6;
+  min-height: 150vh;
+  flex-direction: column;
+  display: flex;
+}
+main {
+  flex: 1;
+}
+footer {
+  background-color: var(--clr-footer);
+  padding: 0;
+  border-top: 1px solid var(--clr-cloud);
+}
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 15px 27px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: var(--fw-bold);
+  margin-bottom: 0.75em;
+}
+.btn--primary {
+  background-color: var(--clr-cloud);
+  color: var(--clr-white);
+}
+.btn--primary:hover {
+  background-color: var(--clr-white);
+  color: var(--clr-primary);
+}
+.btn--outline {
+  outline: 3px solid var(--clr-cloud);
+  outline-offset: -3px;
+  color: var(--clr-white);
+}
+.btn--outline:hover {
+  background-color: var(--clr-white);
+  color: var(--clr-primary);
+}
+header {
+  position: sticky;
+  background-color: var(--clr-header);
+  text-align: center;
+}
+.logo {
+  padding-top: 1em;
+}
+.nav__list {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  margin-top: 1em;
+  padding: 1em;
+  list-style: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  letter-spacing: 1px;
+  gap: 10px;
+}
+
+.weather {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+}
+.weather__icon {
+  grid-row: span 2;
+  background-color: var(--clr-cloud);
+  padding: 0.5em;
+}
+.weather__info {
+  margin: 0;
+  margin-left: 0.75em;
+  text-align: left;
+  text-transform: uppercase;
+  color: #ffffff83;
+  font-weight: var(--fw-bold);
+  font-size: 0.75rem;
+  display: flex;
+  letter-spacing: 1px;
+  align-items: center;
+}
+.weather__info:first-of-type {
+  margin-top: 0.5rem;
+  position: relative;
+}
+.weather__info:first-of-type::after {
+  content: " ";
+  position: absolute;
+  background: var(--clr-white);
+  opacity: 0.5;
+  height: 1.5px;
+  width: calc(100% - 0.75rem);
+  bottom: 0;
+}
+
+.weather__info:first-of-type {
+  margin-top: 5px;
+}
+
+.weather__info span {
+  color: var(--clr-white);
+  padding-right: 0.5rem;
+  margin-left: auto;
+  font-size: 1rem;
+}
+main {
+  padding: 3em 1em;
+}
+.main-title {
+  line-height: 1;
+  color: var(--clr-white);
+  line-height: 1;
+  font-weight: var(--fw-black);
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+.main-intro {
+  line-height: 1;
+  font-weight: var(--fw-normal);
+  color: var(--clr-white);
+}
+
+.main--ski {
+  background-image: url(images/skiing-2.jpg);
+  background-size: cover;
+  border-top: 2px var(--clr-cloud);
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  padding: 5px 10px;
+  flex-direction: column;
+}
+
+.social {
+  list-style: none;
+  display: flex;
+  padding: 2px;
+  justify-content: center;
+  margin: 1px;
+}
+.social li {
+  padding: 10px;
+}
+/*  for compaitible with mobile might need to add padding and justify conntent*/
+.footer__list {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+}
+/*Here as well*/
+.footer__list li {
+  cursor: pointer;
+  padding: 5px;
+}
+.all-rights p {
+  text-align: center;
+  font-size: 0.6em;
+  color: var();
+  margin: 1px;
+}
+@media screen and (min-width: 800px) {
+  .main--ski {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+  }
+  .main--ski h1 {
+    display: grid;
+    margin: 50px;
+    grid-auto-columns: 0.5fr 3fr 1fr;
+  }
+  .main-title {
+    line-height: 1;
+    font-weight: var(--fw-black);
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-top: 15px;
+  }
+  .main-intro {
+    line-height: 1;
+    font-weight: var(--fw-normal);
+    color: var(--clr-white);
+    display: grid;
+    margin-left: 45px;
+    margin-bottom: 4rem;
+    grid-auto-columns: 0.5fr 3fr 1fr;
+    line-height: 2;
+  }
+  .btn {
+    cursor: pointer;
+    display: inline-block;
+    padding: 15px 27px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: var(--fw-bold);
+    margin-bottom: 1.5em;
+    width: 400px;
+    margin-left: 50px;
+    text-align: center;
+  }
+  .nav__list li:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+  }
+  header {
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    justify-content: space-between;
+    margin-bottom: auto;
+    align-content: center;
+    width: 100%;
+  }
+  .logo {
+    width: 10%;
+    height: 10%;
+    justify-content: end;
+    padding-right: 50px;
+    padding-bottom: 19px;
+  }
+  header :first-child {
+    margin: auto;
+  }
+
+  .nav__list li a {
+    padding: 30px 40px 0px 40px;
+  }
+  .nav__list li {
+    margin-top: 30px;
+  }
+  .weather {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+  }
+  .weather__icon {
+    grid-row: span 2;
+    background-color: var(--clr-cloud);
+    padding-bottom: 0;
+  }
+  .weather__icon img {
+    width: 61px;
+    height: 66px;
+  }
+  .weather__info {
+    margin: 0;
+    margin-left: 2em;
+    text-align: left;
+    text-transform: uppercase;
+    color: #ffffff83;
+    font-weight: var(--fw-bold);
+    font-size: 0.75rem;
+    display: flex;
+    letter-spacing: 1px;
+    align-items: center;
+  }
+  .weather__info span {
+    color: var(--clr-white);
+    margin-right: 1rem;
+    margin-left: 2rem;
+    margin-top: 5px;
+    font-size: 1rem;
+  }
+}
